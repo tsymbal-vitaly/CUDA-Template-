@@ -1,0 +1,41 @@
+@import"app/libs/smart-grid/smart-grid";
+@import"variables";
+
+@include reset();
+
+html, body{
+    height: 100%;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    height: 1500px;
+}
+
+.container {
+    @include wrapper();
+    box-sizing: border-box;
+}
+
+.infoblock-top {
+    @include col-10();
+    @include offset(1);
+    @include offset-md(0);
+    @include col-md-12();
+    @include infoblock-top;
+}
+
+@import"header";
+@import"banner";
+@import"services";
+@import"team";
+@import"skills";
+@import"work";
+@import"blog";
+@import"contact";
+@import"footer";

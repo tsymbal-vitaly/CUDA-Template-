@@ -1,0 +1,121 @@
+//    skills start
+
+.bg-skills {
+    background-color: $white;
+    color: $steel-blue;
+    
+    hr {
+        width: 86px;
+        border: none;
+        height: 4px;
+        background-color: lighten($steel-blue, 50%);
+        margin: 22px auto 16px;
+    }
+    .row {
+        @include row-flex();
+        padding: 58px 0 104px;
+        
+        .col {
+            @include col();
+            @include col-3();
+            @include col-md-6();
+            @include col-sm-6();
+            @include col-xs-12();
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            .item {
+                text-align: center;
+                box-sizing: border-box;
+                padding: 10px;  
+            }
+        }
+    }
+}
+
+//    diagram start
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    
+    text {
+        color: $light-gray;
+        font-family: $font-family-base;
+        font-weight: 300;
+        line-height: 21px;
+        text-transform: uppercase;
+        
+        .layer1 {
+            font-size: 50px;
+        }
+        .layer2 {
+            font-size: 32px;
+        }
+    }
+}
+.one {
+    circle {
+        fill: rgba($black, 0);
+        stroke: lighten($steel-blue, 65%);
+        stroke-width: 15;
+        stroke-dasharray: 471px 471px;
+    }
+    circle:nth-child(2n) {
+        fill: rgba($black, 0);
+        stroke: $deep-sky-blue;
+        stroke-width: 15;
+    }
+}
+.two {
+    circle {
+        fill: rgba($black, 0);
+        stroke: lighten($steel-blue, 65%);
+        stroke-width: 15;
+        stroke-dasharray: 471px 471px;
+    }
+    circle:nth-child(2n) {
+        fill: rgba($black, 0);
+        stroke: $hot-pink;
+        stroke-width: 15;
+    }
+}
+.three {
+    circle {
+        fill: rgba($black, 0);
+        stroke: lighten($steel-blue, 65%);
+        stroke-width: 15;
+        stroke-dasharray: 471px 471px;
+    }
+    circle:nth-child(2n) {
+        fill: rgba($black, 0);
+        stroke: $mint;
+        stroke-width: 15;
+    }
+}
+.four {
+    circle {
+        fill: rgba($black, 0);
+        stroke: lighten($steel-blue, 65%);
+        stroke-width: 15;
+        stroke-dasharray: 471px 471px;
+    }
+    circle:nth-child(2n) {
+        fill: rgba($black, 0);
+        stroke: $orange;
+        stroke-width: 15;
+    }
+}
+//    diagram end
+
+.title-skill {
+    h3 {
+        font-size: 24px;
+        font-weight: $font-weight-bold;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+}
+
+//    skills end

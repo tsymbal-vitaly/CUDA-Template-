@@ -1,0 +1,76 @@
+$white: #fff;
+$black: #000;
+$amethyst: #87509c;
+$dark-purple: #643a79;
+
+$light-gray: #ccc;
+$dark-gray: #393939;
+$vanilla: #ffdd99;
+$dark-vanilla: #e5c37f;
+$orange: #eb7d4b;
+$dark-orange: #dd4b39;
+$amethyst: #87509c;
+$dark-purple: #643a79;
+$hot-pink: #d74680;
+$dark-hot-pink: #b73c6d;
+$mint: #17c2a4;
+$light-blue: #e7f1f8;
+$dark-light-blue: #bdd1df;
+$deep-sky-blue: #30bae7;
+$dark-deep-sky-blue: #299ec5;
+$steel-blue: #3c4761;
+$han-blue: #3c5499;
+$midnight-blue: #273a71;
+
+//  social link color start
+
+$facebook-color: #6d84b4;
+$twitter-color: #1dcaff;
+$google-color: #dd4b39;
+$behance-color: #1769ff;
+$dribbble-color: #ff8833;
+$linkedin-color: #8d6cab;
+$github-color: #6cc644;
+
+$box-shadow: 5px 5px 20px #333;
+
+$font-family-base: 'Titillium Web', sans-serif;
+$font-size-base: 16px;
+$font-weight-thin: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+$font-weight-base: $font-weight-normal;
+
+$transition: all 0.3s ease-in-out;
+
+//   MENU BUTTON
+$color: $white;
+$transition-button: $transition;
+$base: 10px;
+$space: $base/4;
+
+@mixin infoblock-top {
+    padding: 117px 0 0;
+    text-align: center;
+    
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 0;
+        
+        @media screen and (max-width: $break_sm){
+            line-height: 35px;
+        }
+    }
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.4px;
+        margin: 0;
+    }
+}

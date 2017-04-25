@@ -1,0 +1,181 @@
+//    header start
+
+.default {
+    position: absolute;
+    top: 50px;
+    z-index: 1000;
+    width: 100%;
+    background-color: $amethyst;
+
+    @media screen and (max-width: $break_sm){
+        top: 0; 
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid #fff;
+        
+    }
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+.transbg {
+    background-color: $amethyst;
+}
+
+.navbar {
+    display: flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    width: 100%;
+    position: relative;
+    
+    @media screen and (max-width: $break_sm) {
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        
+            nav {width: 100%;}
+    }
+}
+
+#logo {
+    margin: 0 0 0 38px; padding: 5px;
+
+    @media screen and (max-width: $break_sm) {
+        margin: 5px 0 0 0;
+        
+        img {width: 100px; height: auto;}
+    }
+}
+
+//    NAV
+.navlist {
+    @include row-flex();
+    padding: 0 20px 0 0;
+    
+    @media screen and (max-width: $break_sm){
+        display: none;
+        padding: 20px 0 5px;
+    }
+    
+    li + li {
+        margin: 0 0 0 15px;
+        
+        @media screen and (max-width: $break_sm){
+            margin: 0;
+        }
+    }
+    
+    .is-active {background-color: $dark-purple;}
+    
+    li {
+        transition: $transition;
+        
+        &:hover,
+        &:active {
+            transform: scale(1.2);
+            
+            @media screen and (max-width: $break_sm){
+                transform: scale(1);
+            }
+        }
+        
+        @media screen and (max-width: $break_sm){
+            text-align: center;
+            margin: 5px 0!important;
+        }
+        
+        a {
+            display: block;
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: $transition;
+            color: $white;
+            border-radius: 3px;
+            padding: 4px 15px;
+            
+            &:hover {background-color: $dark-purple;}
+            
+            @media screen and (max-width: $break_sm){
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+        }
+        
+    }
+}
+
+//    MENU BUTTON
+button {
+    display: none; //display: block;
+    margin: 0 16px; 
+    border: none; 
+    background: none; 
+    outline: none;
+    cursor: pointer;
+    
+    @media screen and (max-width: $break_sm){
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: 0;
+        margin: 0;
+    }
+    
+    span {display: block;}
+}
+
+.grid-button {
+    padding: $base*2; 
+    cursor: pointer; 
+    user-select: none;
+
+    .grid {
+        width: $base/1.5;
+        height: $base/1.5;
+        background: $color;
+        color: $color;
+        border-radius: 50%;
+        transition: $transition-button;
+    }
+}
+
+.grid-button.close {
+    .grid {
+        -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
+        transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
+    }
+}
+
+.grid-button.rearrange {
+    .grid {
+        box-shadow: -($base+$space) 0 -($base+$space), 0 0 -($base+$space), ($base+$space) (-($base + $space)), -($base+$space) 0, $base+$space 0, -($base+$space) ($base + $space), 0 ($base+$space), ($base+$space) ($base + $space);
+    }
+}
+
+.grid-button.rearrange.close {
+    .grid {
+        box-shadow: 0 0 -$base, 0 0 -$base*2, $base 0, -$base*2 0, $base*2 0, -$base 0, 0 $base*2, 0 $base;
+    }
+}
+
+.grid-button.collapse {
+    .grid {
+        box-shadow: -($base+$space) 0, -($base+$space) ($base+$space), $base+$space 0, ($base+$space) (-($base+$space)), 0 0 -($base+$space), -($base+$space) 0 -($base+$space), 0 ($base+$space), ($base+$space) ($base+$space);
+    }
+}
+
+.grid-button.collapse.close {
+    .grid {
+        box-shadow: -$base 0, 0 0 transparent, $base 0, 0 0 transparent, 0 0 -$base, 0 0 transparent, 0 $base, 0 0 transparent;
+    }
+}
+//    header end

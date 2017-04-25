@@ -1,0 +1,72 @@
+//    banner start
+
+.banner {
+    background-color: $amethyst;
+    color: $white;
+    text-align: center;
+    padding: 229px 0 0;
+    
+    @media screen and (max-width: $break_md){
+        padding: 180px 0 0 0;
+    }
+    @media screen and (max-width: $break_xs){
+        padding: 150px 0 0 0;
+    }
+    
+    h1 {
+        font-size: 42px;
+        font-weight: $font-weight-bold;
+        line-height: 49px;
+        margin-bottom: 54px;
+        letter-spacing: 0;
+        word-spacing: -2px;
+        
+        @media screen and (max-width: $break_md){
+            font-size: 35px;
+        }
+        
+        @media screen and (max-width: $break_sm){
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 30px;
+        }
+        
+        @media screen and (max-width: $break_xs){
+            font-size: 25px;
+            line-height: 35px;
+        }
+    }
+    .btn {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: $font-weight-semibold;
+        line-height: 26px;
+        letter-spacing: 0.4px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        background-color: $orange;
+        box-shadow: 0px 4px 0px 0px rgba(darken($orange, 5%), 1);
+        padding: 22px 80px 18px;
+        margin-bottom: 149px;
+        border-radius: 3px;
+        transition: $transition;
+        
+        &:hover,
+        &:active {
+            transform: scale(1.2); 
+        }
+        
+        @media screen and (max-width: $break_xs){
+            padding: 15px 25px 11px;
+        }
+    }
+}
+.banner-text {
+    @include col-10();
+    @include offset(1);
+    @include col-md-12();
+    @include offset-md(0);
+}
+
+//    banner end

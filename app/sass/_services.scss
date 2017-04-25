@@ -1,0 +1,64 @@
+//    services start
+
+.bg-services {
+    background-color: $mint;
+    color: $white;
+    
+    hr {
+        width: 86px;
+        border: none;
+        height: 4px;
+        background-color: darken($mint, 10%);
+        margin: 22px auto 18px;
+    }
+    
+    .row {
+        @include row-flex();
+        padding: 55px 0 108px;
+        
+        .col {
+            @include col();
+            @include col-3();
+            @include col-md-6();
+            @include col-sm-6();
+            @include col-xs-12();
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            .item {
+                text-align: center;
+                box-sizing: border-box;
+                padding: 10px;
+                
+                img {
+                    max-width: 100%;
+                    margin-bottom: 47px;
+                }
+                
+                .subtitle {
+                    h3 {
+                        font-size: 24px;
+                        font-weight: $font-weight-bold;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        margin-bottom: 18px;
+                    }
+                }
+                
+                .text {
+                    p {
+                        font-weight: $font-weight-thin;
+                        line-height: 24px;
+                        
+                        @media screen and (max-width: $break_sm){
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//    services end

@@ -1,0 +1,118 @@
+//    team start
+
+.bg-team {
+    background-color: $light-blue;
+    color: $steel-blue;
+    
+    hr {
+        width: 86px;
+        border: none;
+        height: 4px;
+        background-color: lighten($steel-blue, 50%);
+        margin: 22px auto;
+    }
+    
+    .row {
+        @include row-flex();
+        padding: 57px 0 117px;
+        
+        .col {
+            @include col();
+            @include col-3();
+            @include col-md-6();
+            @include col-sm-6();
+            @include col-xs-12();
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            .item {
+                display: flex;
+                @include flex-direction(column);
+                height: 100%;
+                text-align: center;
+                padding: 10px;
+                
+                img {
+                    @include align-self(center);
+                    max-width: 100%;
+                    border-radius: 50%;
+                    margin-bottom: 40px;
+                }
+                
+                .subtitle {
+                    h3 {
+                        font-size: 24px;
+                        font-weight: $font-weight-bold;
+                        line-height: 18px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        margin-bottom: 12px;
+                    }
+                }
+                
+                .job {
+                    h5 {
+                        color: $deep-sky-blue;
+                        line-height: 18px;
+                        word-spacing: 3px;
+                        letter-spacing: 0.5px;
+                        margin-bottom: 22px;
+                    }
+                }
+                
+                .text {
+                    p {
+                        font-weight: $font-weight-thin;
+                        line-height: 24px;
+                        letter-spacing: 1px;
+                        word-spacing: 2px;
+                        margin-bottom: 7px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.social-team {
+    margin: auto 10px 10px 10px;
+
+    ul {
+        @include row-flex();
+        @include justify-content(center);
+        @include align-items(center);
+
+        li {
+            margin: 0 16px 0;
+            transition: $transition;
+
+            &:hover {transform: scale(1.2);}
+
+            &:nth-child(1) a:hover{background-color: #344e86;}
+
+            &:nth-child(2) a:hover{background-color: #1da1f2;}
+
+            &:nth-child(3) a:hover{background-color: #0077b5;}
+
+            &:nth-child(4) a:hover{background-color: #d73925;}
+
+            a {
+                @include row-flex();
+                @include justify-content(center);
+                @include align-items(center);
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                color: $white;
+                background-color: $dark-light-blue;
+                text-decoration: none;
+                transition: $transition;
+                border-radius: 100%;
+
+            }
+        }
+    }
+}
+
+//    team end

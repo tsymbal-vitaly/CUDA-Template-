@@ -1,0 +1,92 @@
+//    blog start
+
+.bg-blog {
+    background-color: $hot-pink;
+    color: $white;
+    
+    hr {
+        width: 86px;
+        border: none;
+        height: 4px;
+        background-color: $dark-hot-pink;
+        margin: 22px auto 18px;
+    }
+    .row {
+        @include row-flex();
+        @include justify-content(space-between);
+        padding: 73px 0 0;
+        margin-bottom: -23px;
+        
+        .col {
+            @include row-flex();
+            @include justify-content(flex-start);
+            @include col-6();
+            @include col-md-10();
+            @include offset-md(1);
+            @include offset-sm(0);
+            @include col-sm-12();
+            box-sizing: border-box;
+            padding: 0 10px;
+            margin-bottom: 149px;
+            
+            @media screen and (max-width: $break_xs){
+                margin: 0 auto 50px;
+            }
+            
+            img {
+                @include align-self(center);
+                max-width: 100%;
+                border-radius: 50%;
+                margin: -90px 53px 0 11px;
+                
+                @media screen and (max-width: $break_xs){
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+    }
+}
+.wrap-comment {
+    @include row-flex();
+    @include flex-direction(column);
+    @include col-9();
+    @include col-xs-12;
+    height: 100%;
+    
+    @media screen and (max-width: $break_xs){
+        text-align: center;
+    }
+    
+    .comment {
+        p {
+            font-size: 21px;
+            font-style: italic;
+            line-height: 31px;
+            letter-spacing: 0.8px;
+            margin: 0 0 20px;
+        }
+    }
+    .subtitle {
+        margin-top: auto;
+        
+        @media screen and (max-width: $break_xs){
+            margin: 0;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+        }
+    }
+    .job {
+        h5 {
+            color: $vanilla;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+}
+
+//    blog end
